@@ -38,20 +38,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void bak(View view) {
-        String notificationService = Context.NOTIFICATION_SERVICE;
-
-        NotificationManager notificationManager = (NotificationManager) getSystemService(notificationService);
-
-        Intent notificationIntent = new Intent(this, NotificacionActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
-
-        int icono = android.R.drawable.stat_sys_warning;
-        Notification notification = new Notification(icono, "Mi notificación", System.currentTimeMillis());
-
-        // id notificación, único en la app
-        notificationManager.notify(1, notification);
-
-        Toast.makeText(this, "Toast!!!!", Toast.LENGTH_SHORT).show();
-    }
+    
 }
